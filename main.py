@@ -32,4 +32,10 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
+@bot.command()
+async def superoast(ctx):
+    for _ in range(5):
+        roast = random.choice(ROASTS)
+        await ctx.send(roast)
+
 bot.run(TOKEN)
